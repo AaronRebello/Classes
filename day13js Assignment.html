@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>day 13hw</title>
+
+<style>
+		body{height: 4000px;}
+		#nav{
+			height: 80px;
+			width: 100%;
+			background-color: pink;
+			/*padding: 20px;*/
+			padding: 20px;
+
+		}
+		li{display: inline-block;
+			margin-left: 50px;
+			padding: 20px;}
+			ul{margin-left: 780px;
+			}
+		
+	</style>
+</head>
+<body onscroll="funonscroll()">
+
+
+	
+
+
+	<div id="nav">
+		<ul>
+			<li>home</li>
+			<li>blog</li>
+			<li>contact</li>
+			<li>like us</li>
+		</ul>
+	</div>
+	<script> 
+
+		function funonscroll(){
+			var a= document.getElementById('nav');
+			a.style="position:fixed;top:0%;left:0%;background:yellow";
+			// a.style.background="yellow";
+		}
+
+	 </script>
+
+</body>
+</html>

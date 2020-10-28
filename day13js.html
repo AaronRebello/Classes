@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>day13 js</title>
+	<style>
+		#div1{
+			height: 200px;
+			width: 200px;
+			border: 1px solid black;
+			display: none;
+			margin-top: 100px;
+		}
+
+	/*	#div2{
+			height: 200px;
+			width: 200px;
+			border: 1px solid black;
+			display: none;
+			margin-top: 100px;*/
+
+
+	</style>
+</head>
+<body>
+	<select onclick ="abc()" id="onclick">
+		<option value="yellow">yellow</option>
+		<option value="red">red</option>
+		<option value="pink">pink</option>
+		<option value="blue">blue</option>
+		<option value="orange">orange</option>
+
+	</select>
+	<p id="demo"></p>
+	<div id="div1"></div>
+	<!-- <div id="div2"></div> -->
+
+	<script>
+
+		var b= document.getElementById('div1');
+
+		function abc(){
+		var a= document.getElementById('onclick').value;
+		document.getElementById('div1').style.display="block";
+		// a.style.background="yellow"
+		b.style.background=a;
+		var c= document.getElementById('demo').innerHTML="Colour :- changed to "+a;
+       }
+		// var b=  document.getElementById('div2')
+		// a.style.display="block";
+	 //    b.style.background="yellow";
+
+  //       function abc(){
+		// var b= document.getElementById('div2')
+		// b.style.display="block";
+		// b.style.background="red";
+		// }
+
+		// function abc(){
+		// 	var =
+		// }
+
+	</script>
+
+</body>
+</html>
