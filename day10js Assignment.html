@@ -1,0 +1,43 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>day10 ass</title>
+	<style type="text/css">
+	div{
+		height: 300px;
+		width: 300px;
+		border: 1px solid black;
+		border-color: red;
+	}
+	</style>
+</head>
+<body>
+<h2>Try to change</h2>
+<div id="demo1" onmouseover="multiclr();">
+	
+</div>
+
+<script>
+	
+
+	function multiclr(){
+		var x= Math.floor(Math.random() * 256);
+		var y= Math.floor(Math.random() * 256);
+		var z= Math.floor(Math.random() * 256);
+		var bgColor = "rbg("+x+","+y+","+z+")";
+	
+    
+    document.getElementById('demo1').style.background = bgColor;
+}
+
+var str = "hello javascript";
+var result = str.substr(0,6);
+alert(result);
+
+</script>
+
+</body>
+
+
+</html>
