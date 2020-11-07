@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>day 14 this </title>
+	<style>
+		#modal{height: 200px;
+			width: 700px;
+			border: 1px solid black;
+			display: none;}
+		
+	</style>
+</head>
+<body>
+	<!-- <button onclick="fun1(this)" title="btn-1">btn-1</button>
+	<button onclick="fun1(this)" title="btn-2">btn-2</button>
+	<button onclick="fun1(this)" title="btn-3">btn-3</button>
+	<button onclick="fun1(this)" title="btn-4">btn-4</button>
+	<button onclick="fun1(this)" title="btn-5">btn-5</button>
+	<button onclick="fun1(this)" title="btn-6">btn-6</button>
+	<button onclick="fun1(this)" title="btn-7">btn-7</button> -->
+
+
+   <button onclick="fun2(this)">1</button>
+
+   <button onclick="fun2(this)">2</button>
+
+   <button onclick="fun2(this)">3</button>
+
+   <div id="modal">
+   	<span></span>
+   </div>
+
+<script>
+	// function fun1(a){
+	// 	a.style.color= "red";
+	// 	alert(a.getAttribute('title'));
+	// }
+
+    function fun2(b){
+    	var b= document.getElementById('modal');
+    	b.style.display="block";
+    	
+    }
+
+</script>
+</body>
+</html>

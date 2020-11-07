@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>day11js</title>
+	<style>
+		input{
+			display: block;
+			margin: 10px;
+			padding: 10px;
+            border: 1px solid lightblue;
+		}
+		p{color: red;}
+	</style>
+</head>
+<body>
+
+	<form onsubmit="return validate()">
+		<label>Name:</label>
+		<input type="text" placeholder="Enter your name:" id="name">
+		<p id="demo"> </p>
+
+		<label>Password</label>
+		<input type="Password" placeholder="Enter your Password:" id="Password">
+        <p id="demo1"></p>
+		<button type="submit">submit</button>
+</form>
+
+	<script>
+
+		function validate(){
+			var a= document.getElementById('name');
+			var b= document.getElementById('Password');
+			flag =true;
+			if (a.value.trim()=="") {
+				alert("blank name")
+				a.style.border="2px solid red"
+				document.getElementById('demo').innerHTML="Enter your Name";
+				flag=false
+			}
+			if (b.value.trim()=="") {
+				alert("blank Password")
+				b.style.border="2px solid red"
+				document.getElementById('demo1').innerHTML="Enter your Password";
+				flag=false
+			}
+
+			if (b.value.trim().length<5) {
+				alert("your Password is to short")
+				b.style.border="2px solid red"
+				// document.getElementById('demo1').innerHTML="Enter your Password";
+				flag=false
+			}
+			return flag
+		}
+
+	
+	
+     
+
+	</script>
+
+</body>
+</html>
