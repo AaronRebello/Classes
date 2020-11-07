@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="jquery.min.js"></script>
+	<title>jQuery day1</title>
+
+	<style>
+	.abc{
+		background:red;
+		height:300px;
+		width:300px;
+		<!-- display:none; -->
+	}
+	.slide{
+		width:300px;
+		background:#ddd;
+		padding:20px;
+	}
+	.slide .slide-panel{
+		<!-- display:none; -->
+	}
+	.test{
+		height:100px;
+		width:100px;
+		background:yellow;
+	}
+</style>
+
+</head>
+<body>
+
+
+
+<p id="demo1" class="abc"><b>Hello World</b></p>
+<!-- <p class="abc"><b>Hello World</b></p>
+<h1 class="abc">dfghnjd</h1>
+<input name="mobile" type="text" id="input1">
+<a id="a1" href="https://www.trycatchclasses.com/">Trycatch Classes</a> -->
+<button id="btn1">Click</button> 
+
+
+<!-- 
+<div class="abc"></div>
+<button id="btn2">Click</button>
+-->
+
+
+<!--<div class="slide">
+	Slide Div
+	<div class="slide-panel">
+		Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer too
+	</div>
+</div>
+-->
+
+
+<!-- <div class="test">
+</div>
+<button id="animate">Animate</button>
+-->
+<script>
+	//$('#input1').val("Bhavna");
+	$('#btn1').click(function(){
+		var x=$('#demo1').html();
+		alert(x);
+		//$('#demo1').html("<b>Welcome</b>");
+		//var x=$('#demo1').text();
+		//alert(x);
+		//$('#demo1').text("<b>Welcome</b>");
+		//var x=$('#input1').val();
+		//alert(x);
+		//$('#input1').val("Bhavna");
+		var h=$('#a1').attr('href');
+		alert(h);
+		// $('#a1').attr('href',"abc");
+		//$('#demo1').css('color',"red");
+		/*$('#demo1').css({
+			'color':'red',
+			"background":"yellow",
+		});
+		*/
+		//$('.abc').css('color',"red");
+		//$('p').css('color',"red");
+		//$('p.abc').css('color',"red");
+		//$('input[name="mobile"]').val("23456789");
+	});
+	
+	$('#btn2').click(function(){
+		//$('.abc').hide();
+		//$('.abc').hide("slow");
+		//$('.abc').hide(3000);
+		//$('.abc').show();
+		//$('.abc').show("slow");
+		//$('.abc').show(3000);
+		//$('.abc').toggle(2000);
+		//$('.abc').fadeIn(3000);
+		//$('.abc').fadeOut(3000);
+		//$('.abc').fadeToggle(2000);
+	});
+	
+	$('.slide').click(function(){
+		//$('.slide-panel').slideDown();
+		//$('.slide-panel').slideDown(2000);
+		//$('.slide-panel').slideUp(2000);
+		//$('.slide-panel').slideToggle(2000);
+	});
+	
+	$('#animate').click(function(){
+		/*$('.test').animate({
+			'height':"300px",
+			'width':"300px",
+		}, 3000);*/
+		// $('.test').animate({
+		// 	'height':"300px",
+		// }, 3000);
+		// $('.test').animate({
+		// 	'width':"300px",
+		// }, 3000);
+	})
+	
+	/*var num=[12,4,65,78,8];
+	var sum=0;
+	for(var x=0; x<num.length; x++){
+		//sum+=num[x];
+		sum=sum+num[x];
+	}
+	alert(sum);
+	*/
+	
+	
+	var arr=[[1,2,3],[4,5,6]];
+	var new_array=[];
+	var ar1=[];
+	var new_array_length=0;
+	for(var x=0; x<arr.length;x++){
+		new_array=arr[0];	
+		ar1=arr[1];
+	}
+	var new_index=new_array.length;
+	for(var y=0; y<ar1.length; y++){
+		new_array[new_index]=ar1[y];
+		new_index++;
+	}
+	console.log(new_array);
+	
+</script>
+
+</body>
+</html>

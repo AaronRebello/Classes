@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="jquery.min.js"></script>
+	<title>jQuery day2</title>
+	<style>
+	.main *{
+		border:solid 1px #DDD;
+		padding:5px;
+	}
+</style>
+</head>
+<body>
+	
+
+<a href="https://www.flipkart.com/?affid=siteplug&affExtParam1=45964b3073cbfd910e4202f9498cf2ab">Abc</a>
+<a href="xyz.html">Xyz</a>
+<a href="dsffdgfd.html">dsfdsfdf</a>
+<a href="test.html">Test</a>
+
+<div id="demo1" class="abc">
+	<h1 id="demo">Trycatch Classes</h1>
+</div>
+<button id="btn1">Click</button>
+
+
+ <div class="outer">
+	<div class="main">
+		<p>Paragraph 1</p>
+		<h1>Heading 1</h1>
+		<h1 id="demo4">Heading 2</h1>
+		<div>
+			<p>Paragraph 2</p>
+			<h1>Heading 3</h1>
+			<div id="demo2">
+				<p>Paragraph 3</p>
+				<h1 id="demo3">Heading 4</h1>
+				<p>Paragraph 4</p>
+			</div>
+			<p>Paragraph 5</p>
+		</div>
+		<h1 id="demo5">Heading 5</h1>
+		<p>Paragraph 6</p>
+		<h1>Heading 6</h1>
+	</div>
+</div>
+<button id="btn2">Click</button>
+
+
+<script>
+	var a=document.getElementsByTagName('a');
+	for(var x=0; x<a.length; x++){
+		a[x].setAttribute('onclick',"get_ref(this)")
+	}
+	function get_ref( h ){
+		alert(h.getAttribute('href'));
+	}
+	
+	
+	$(document).ready(function(){
+		$('#btn1').click(function(){
+			$('#demo').append(", Welcome");
+			$('#demo').prepend(", Welcome");
+			$('#demo').after(", Welcome");
+			$('#demo').before(", Welcome");
+			$('#demo1').remove();
+			$('#demo1').empty();
+		    $('#demo1').addClass('abc xyz');
+			$('#demo1').removeClass('abc');
+			$('#demo1').toggleClass('abc');
+			$('#demo1').addClass('xyz');
+		    $('#demo1').removeClass('abc');
+			$('#demo1').addClass('xyz').removeClass('abc');
+			$('#demo').hide("slow");
+			alert(124);
+			$('#demo').hide("slow", function(){
+				alert(1);
+			});
+			
+			
+		});
+		$('#btn2').click(function(){
+			//$('#demo3').parent().css('border',"solid 1px red");
+			//$('#demo3').parents().css('border',"solid 1px red");
+			//$('#demo3').parents('.main').css('border',"solid 1px red");
+			//$('#demo3').parentsUntil('.outer').css('border',"solid 1px red");
+			
+			//$('#demo3').parent('#demo2').css('border',"solid 1px red");
+			
+			//$('.main').children().css('border',"solid 1px red");
+			
+			//$('.main').children('p').css('border',"solid 1px red");
+			
+			//$('.main').find('p').css('border',"solid 1px red");
+			
+			//$('#demo4').siblings().css('border',"solid 1px red");
+			
+			//$('#demo4').prev().css('border',"solid 1px red");
+			
+			//$('#demo4').prev('h1').css('border',"solid 1px red");
+			
+			//$('#demo4').prevAll().css('border',"solid 1px red");
+			
+			//$('#demo4').prevAll('p').css('border',"solid 1px red");	
+			
+			//$('#demo4').prevUntil('p').css('border',"solid 1px red");
+			
+			//$('#demo4').next('p').css('border',"solid 1px red");
+			
+			//$('#demo4').nextUntil('#demo5').css('border',"solid 1px red");
+			
+			//$('#demo4').nextAll().css('border',"solid 1px red");
+			//$('#demo4').nextUntil('#demo5').children('p').css('border',"solid 1px red");
+			
+			//$('.main').find('*').css('border',"solid 1px red");
+		});
+	})
+	
+</script>
+
+</body>
+</html>
